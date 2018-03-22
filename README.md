@@ -1,6 +1,7 @@
 ## 存放一些常用的docker組合
 ##### 如何安裝docker與docker-compose #####
-安裝 docker
+
+##### 安裝 docker #####
 ```
 sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
@@ -16,7 +17,7 @@ sudo usermod -aG docker $(whoami)
 
 sudo reboot
 ```
-安裝 docker-compose
+##### 安裝 docker-compose #####
 ```
 sudo apt-get install -y curl
 
@@ -24,7 +25,9 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-c
 
 sudo chmod +x /usr/local/bin/docker-compose
 ```
-常用指令
+
+##### 常用指令 #####
+
 build dockerfile
 ```
 docker build -t <imagetag> -f <dockfilepath> .
