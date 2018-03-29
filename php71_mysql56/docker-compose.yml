@@ -17,8 +17,8 @@ services:
     image: mysql:5.6
     restart: always
     volumes:
-      - ./../mysql:/var/lib/mysql
-      - ./mysql:/etc/mysql
+      - ./../mysql-data:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
     #  - ./init_db/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
     environment:
       MYSQL_ROOT_PASSWORD: root
