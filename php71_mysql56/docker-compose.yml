@@ -10,8 +10,11 @@ services:
       - 443:443
     volumes:
       - ./..:/var/www/html/app/projectname
+      - ./_initsh:/tmp/_initsh
     networks:
       - web-net
+    command: >
+      bash -c "sh /tmp/_initsh/init.sh"
   db:
     container_name: db
     image: mysql:5.6

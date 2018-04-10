@@ -36,6 +36,12 @@ run docker-compose
 ```
 docker-compose up -d
 ```
+##### 2018-04-10 #####
+A.修改php7.1 + mysql5.6(2個container)的
+  dockerfile跟docker-compose yaml
+  
+  1. 新增crontab
+  2. 將web的docker CMD移動到shell script執行
 ##### 2018-03-22 #####
 A.新增php7.1 + mysql5.6(2個container)的
   dockerfile跟docker-compose yaml
