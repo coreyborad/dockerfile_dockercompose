@@ -1,0 +1,21 @@
+FROM ubuntu:16.04
+
+MAINTAINER Corey <coreyborad@hotmail.com.tw>
+
+# Mosquitto
+RUN apt-get update && apt-get install -y software-properties-common \
+    python-software-properties \
+    locales
+RUN locale-gen en_US.UTF-8
+RUN export LANG=en_US.UTF-8    
+RUN LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y
+RUN apt-get install -y mosquitto mosquitto-clients
+RUN apt-get install -y cron
+RUN sed -i '/session    required     pam_loginuid.so/c\#session    required   pam_loginuid.so' /etc/pam.d/cron
+RUN ln -snf /usr/share/zoneinfo/'Asia/Taipei' /etc/localtime
+RUN echo 'Asia/Taipei' > /etc/timezone
+
+# Open port
+EXPOSE 1883
+EXPOSE 8883
+EXPOSE 9001

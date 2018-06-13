@@ -36,6 +36,10 @@ run docker-compose
 ```
 docker-compose up -d
 ```
+##### 2018-06-13 #####
+A.新增 patch_2
+  
+  內容: php71+mysql56+mosquitto+mongodb
 ##### 2018-04-10 #####
 A.修改php7.1 + mysql5.6(2個container)的
   dockerfile跟docker-compose yaml
