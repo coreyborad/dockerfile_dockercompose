@@ -1,4 +1,12 @@
-## 存放一些常用的docker組合
+## 存放一些常用的docker相關的程式碼
+
+##### 對照表格 #####
+Folder name   | Content
+--------------|---------
+patch_1       | php71+mysql56
+patch_2       | php71+mysql56+mosquitto+mongodb
+patch_3       | 依照docker-compose config 匯出 docker image的 shell scripts 
+
 ##### 如何安裝docker與docker-compose #####
 
 ##### 安裝 docker #####
@@ -36,6 +44,11 @@ run docker-compose
 ```
 docker-compose up -d
 ```
+
+##### 2019-02-12 #####
+A.修改 php71_mysql56 資料夾名稱 為 patch_1
+B.新增 對照表至上方
+C.新增 patch_3
 ##### 2018-06-13 #####
 A.新增 patch_2
   
